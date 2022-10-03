@@ -1,0 +1,305 @@
+//variables
+$height-header:80px;
+$marginleft-header:20px;
+$margintop-header:60px;
+$font:'Epilogue', sans-serif;
+
+//importacion
+@import 'universal.scss';
+
+//mixing
+@mixin borderHeader(){
+    margin-left: $marginleft-header;
+    
+}
+
+@mixin marginOptions(){
+    margin-left: $margintop-header;
+}
+
+@mixin font(){
+    font-family: $font;
+    font-size: 17px;
+    color: hsl(0, 0%, 41%);
+}
+
+@mixin arrow(){
+    width: 12px;
+    height: 8px;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
+
+//clases
+.header{
+    &__izquierda{
+        background-color: red;
+        height: $height-header;
+        width: 80%;
+        align-items: center;
+        gap: 2px;
+        
+        &__logo{
+            @include borderHeader();
+            align-items: center;
+            
+            &__img{
+                height: 30px;
+                width: 100px; 
+            }
+        }
+        &__features{
+            @include marginOptions();
+            @include font();
+            
+
+            &__img{
+                @include arrow();
+            }
+
+        }
+        &__features:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__company{
+            @include marginOptions();
+            @include font();
+
+            &__img{
+                @include arrow();
+            }
+        }
+        &__company:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__careers{
+            @include marginOptions();
+            @include font();
+        }
+        &__careers:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__about{
+            @include marginOptions();
+            @include font();
+        }
+        &__about:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__hamburguer{
+            display: none;
+        }
+    }
+    &__derecha{
+        background-color: blue;
+        height: $height-header;
+        width: 20%;
+        align-items: center;
+        gap: 40px;
+        
+        &__login{
+            @include font();
+            margin-left: 100px;
+
+        }
+        &__login:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__register{
+            @include font();
+            border: 1px solid hsl(0, 0%, 41%);
+            border-radius: 20px;
+            padding: 15px 23px 15px 23px;
+
+        }
+        &__register:hover{
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    }
+}
+
+
+#contenedorFlotante{
+    background-color: whitesmoke;
+    margin-top: 50px;
+    margin-left: -100px;
+    width: 160px;
+    height: 120px;
+    padding: 10px;
+    z-index: 100;
+    border-radius: 20px;
+    gap: 3px;
+    position: absolute;
+}
+
+.letra{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    width: 250px;
+}
+.hidden {
+    display: none;
+}
+.cardFL{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    
+
+}
+.imageFLO{
+   display: flex;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 10px;
+    z-index: 100;   
+}
+.imageFLO:hover{
+    cursor: pointer;
+}
+
+//companyboton
+#contenedorFlotante1{
+    background-color: whitesmoke;
+    margin-top: 50px;
+    margin-left: -10px;
+    width: 85px;
+    height: 100px;
+    padding: 10px;
+    z-index: 100;
+    border-radius: 20px;
+    gap: 3px;
+    position: absolute;
+}
+
+.letra1{
+    display: flex;
+    align-items: center;
+    margin-left: -8px;
+    margin-top: 2px;
+    width: 250px;
+}
+.hidden1 {
+    display: none;
+}
+.cardFL1{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+.imageFLO2{
+   display: flex;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 10px;
+    z-index: 100;   
+}
+.imageFLO1:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+    // .header {
+    //     &__item {
+    //         display: none;
+
+    //         &--mobile {
+    //             display: block;
+    //         }
+    //     }
+
+    //     &__banner {
+    //         flex-direction: column-reverse;
+    //         padding: 0;
+    //     }
+
+    //     &__img-banner {
+    //         width: 100%;
+
+    //         img {
+    //             transform: none;
+    //         }
+    //     }
+
+    //     &__text {
+    //         width: 90%;
+    //         text-align: center;
+    //         margin: 40px 0;
+    //         hr{
+    //             display: none;
+    //         }
+            
+    //     }
+    // }
+    .header{
+        &__izquierda{
+            width: 100%;
+            justify-content: space-between;
+            &__features{
+                display: none;
+            }
+            &__company{
+                display: none;
+            }
+            &__careers{
+                display: none;
+            }
+            &__about{
+                display: none;
+            }
+            &__hamburguer{
+                display: flex;
+            }
+        }
+        &__derecha{
+            display: none;
+        }
+    }
+
+    //hamburguer
+#contenedorFlotante2{
+    background-color: red;
+    margin-top: 30px;
+    margin-right: 0px;
+    width: 350px;
+    height: 2100px;
+    padding: 10px;
+    z-index: 100;
+    gap: 3px;
+    
+}
+
+.letra2{
+    display: flex;
+    align-items: center;
+    margin-right: -130px;
+    margin-top: 20px;
+    z-index: 100;
+}
+.hidden2 {
+    display: none;
+}
+.cardFL2{
+    display: flex;
+    flex-direction: column;
+}
+.imageFLO3{
+   display: flex;
+    margin-left: 15px;
+    margin-top: 10px;
+    z-index: 100;   
+}
+.imageFLO3:hover{
+    cursor: pointer;
+}
+}
