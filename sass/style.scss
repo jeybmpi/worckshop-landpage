@@ -1,0 +1,141 @@
+//importar fonts 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DM+Serif+Display&family=Epilogue&family=Karla&family=Passion+One&family=Roboto&family=Rubik&family=Source+Sans+Pro&display=swap');
+
+//variables SASS
+$font-body: 'Epilogue';
+$background-color: hsl(0, 0%, 98%);
+$font-size-body: 19px;
+$color-font: hsl(0, 0%, 8%);
+$color-font2: hsl(0, 0%, 41%);
+
+//importar modules
+@import 'universal';
+
+//funciones
+
+@function size($t) {
+    @return $t*$font-size-body;
+}
+
+//mixins
+@mixin paddings($t) {
+    padding: $t*1px $t*3px;
+}
+
+@mixin margins ($t) {
+    margin: $t*1px 0;
+
+}
+
+@mixin button($s) {
+    @include paddings($s);
+    color: $background-color;
+    font-size: $font-size-body;
+    background-color: $color-font;
+    border-radius: 10px;
+    font-family: $font-body;
+    height: 30px;
+    cursor: pointer;
+}
+
+body {
+    font-family: $font-body;
+    font-size: $font-size-body;
+}
+
+.main {
+    background-color: $background-color;
+
+    &__banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    &__text {
+        width: 40%;
+        margin-top: 180px;
+        @include paddings(40);
+
+        h1 {
+            color: $color-font;
+            font-size: size(5);
+        }
+
+        p {
+            @include margins(50);
+            line-height: 30px;
+            color: $color-font2;
+            font-weight: bold;
+
+        }
+
+        button {
+            @include button(8);
+            @include margins(20);
+
+        }
+    }
+
+    &__img-icons {
+        display: flex;
+        margin: 110px 0;
+        gap: 80px;
+
+    }
+
+    &__img-banner {
+        width: 35%;
+        @include paddings(40);
+
+        img {
+            width: 90%;
+            object-fit: cover;
+        }
+    }
+    &__img-banner2{
+        img{
+            display: none;
+        }
+    }
+
+}
+
+//diseño responsive
+
+@media screen and (max-width:800px) {
+    .main {
+        &__banner {
+            flex-direction: column-reverse;
+            padding: 0;
+        }
+
+        &__text {
+            padding: 0px;
+            width: 120%;
+            text-align: center;
+
+            h1{
+                font-size: 60px;
+            }
+        }
+
+        &__img-icons {
+            justify-content: center;
+            gap:60px
+        }
+
+        &__img-banner {
+            img{
+                display: none;
+            }
+        }
+        &__img-banner2{
+            img{
+            display:flex;
+            }
+        }
+    }
+
+}
