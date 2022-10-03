@@ -1,3 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Epilogue:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
 
+.header, .header__izquierda, .header__derecha, .header__izquierda__features, .header__izquierda__company, .header__izquierda__careers, .header__izquierda__logo, .header__izquierda__about {
+  display: flex;
+}
+
+.header__izquierda {
+  background-color: red;
+  height: 80px;
+  width: 80%;
+  align-items: center;
+  gap: 2px;
+}
+.header__izquierda__logo {
+  margin-left: 20px;
+  align-items: center;
+}
+.header__izquierda__logo__img {
+  height: 30px;
+  width: 100px;
+}
+.header__izquierda__features {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__features__img {
+  width: 12px;
+  height: 8px;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+.header__izquierda__company {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__company__img {
+  width: 12px;
+  height: 8px;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+.header__izquierda__careers {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__careers:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__izquierda__about {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__about:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__derecha {
+  background-color: blue;
+  height: 80px;
+  width: 20%;
+  align-items: center;
+  gap: 40px;
+}
+.header__derecha__login {
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+  margin-left: 100px;
+}
+.header__derecha__login:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__derecha__register {
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 20px;
+  padding: 15px 23px 15px 23px;
+}
+.header__derecha__register:hover {
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,113 @@
+//variables
+$height-header:80px;
+$marginleft-header:20px;
+$margintop-header:60px;
+$font:'Epilogue', sans-serif;
+
+//importacion
+@import 'universal.scss';
+
+//mixing
+@mixin borderHeader(){
+    margin-left: $marginleft-header;
+    
+}
+
+@mixin marginOptions(){
+    margin-left: $margintop-header;
+}
+
+@mixin font(){
+    font-family: $font;
+    font-size: 17px;
+    color: hsl(0, 0%, 41%);
+}
+
+@mixin arrow(){
+    width: 12px;
+    height: 8px;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
+
+//clases
+.header{
+    &__izquierda{
+        background-color: red;
+        height: $height-header;
+        width: 80%;
+        align-items: center;
+        gap: 2px;
+        
+        &__logo{
+            @include borderHeader();
+            align-items: center;
+            
+            &__img{
+                height: 30px;
+                width: 100px; 
+            }
+        }
+        &__features{
+            @include marginOptions();
+            @include font();
+            
+            &__img{
+                @include arrow();
+            }
+        }
+        &__company{
+            @include marginOptions();
+            @include font();
+
+            &__img{
+                @include arrow();
+            }
+        }
+        &__careers{
+            @include marginOptions();
+            @include font();
+        }
+        &__careers:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__about{
+            @include marginOptions();
+            @include font();
+        }
+        &__about:hover{
+            color: black;
+            cursor: pointer;
+        }
+    }
+    &__derecha{
+        background-color: blue;
+        height: $height-header;
+        width: 20%;
+        align-items: center;
+        gap: 40px;
+        
+        &__login{
+            @include font();
+            margin-left: 100px;
+        }
+        &__login:hover{
+            color: black;
+            cursor: pointer;
+        }
+        &__register{
+            @include font();
+            border: 1px solid hsl(0, 0%, 41%);
+            border-radius: 20px;
+            padding: 15px 23px 15px 23px;
+
+        }
+        &__register:hover{
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    }
+}
