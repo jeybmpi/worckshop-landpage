@@ -59,11 +59,13 @@ body {
         @include paddings(40);
 
         h1 {
+            
             color: $color-font;
             font-size: size(5);
         }
 
         p {
+            
             @include margins(50);
             line-height: 30px;
             color: $color-font2;
@@ -80,7 +82,7 @@ body {
 
     &__img-icons {
         display: flex;
-        margin: 110px 0;
+        margin: 110px;
         gap: 80px;
 
     }
@@ -112,8 +114,7 @@ body {
         }
 
         &__text {
-            padding: 0px;
-            width: 120%;
+            padding: 0px;         
             text-align: center;
 
             h1{

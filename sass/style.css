@@ -46,7 +46,7 @@ body {
 }
 .main__img-icons {
   display: flex;
-  margin: 110px 0;
+  margin: 110px;
   gap: 80px;
 }
 .main__img-banner {
@@ -68,7 +68,6 @@ body {
   }
   .main__text {
     padding: 0px;
-    width: 120%;
     text-align: center;
   }
   .main__text h1 {
