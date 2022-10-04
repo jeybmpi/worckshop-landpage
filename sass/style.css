@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DM+Serif+Display&family=Epilogue&family=Karla&family=Passion+One&family=Roboto&family=Rubik&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Epilogue:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+}
+
+.header, .header__izquierda, .header__derecha, .header__izquierda__features, .header__izquierda__company, .header__izquierda__careers, .header__izquierda__logo, .header__izquierda__about, .header__izquierda__hamburguer, .carrersAnd {
+  display: flex;
 }
 
 body {
@@ -51,6 +56,7 @@ body {
 }
 .main__img-banner {
   width: 35%;
+  margin-left: -10px;
   padding: 40px 120px;
 }
 .main__img-banner img {
@@ -59,6 +65,192 @@ body {
 }
 .main__img-banner2 img {
   display: none;
+}
+
+.header__izquierda {
+  background-color: white;
+  height: 80px;
+  width: 80%;
+  align-items: center;
+  gap: 2px;
+}
+.header__izquierda__logo {
+  margin-left: 20px;
+  align-items: center;
+}
+.header__izquierda__logo__img {
+  height: 30px;
+  width: 100px;
+}
+.header__izquierda__features {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__features__img {
+  width: 12px;
+  height: 8px;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+.header__izquierda__features:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__izquierda__company {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__company__img {
+  width: 12px;
+  height: 8px;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+.header__izquierda__company:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__izquierda__careers {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__careers:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__izquierda__about {
+  margin-left: 60px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+}
+.header__izquierda__about:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__derecha {
+  background-color: white;
+  height: 80px;
+  width: 20%;
+  align-items: center;
+  gap: 40px;
+}
+.header__derecha__login {
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+  margin-left: 90px;
+}
+.header__derecha__login:hover {
+  color: black;
+  cursor: pointer;
+}
+.header__derecha__register {
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  color: hsl(0deg, 0%, 41%);
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 20px;
+  padding: 15px 23px 15px 23px;
+}
+.header__derecha__register:hover {
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.header__derecha__hamburguer {
+  display: none;
+}
+
+#contenedorFlotante {
+  background-color: whitesmoke;
+  margin-top: 50px;
+  margin-left: -100px;
+  width: 160px;
+  height: 120px;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 20px;
+  gap: 3px;
+  position: absolute;
+}
+
+.letra {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  width: 250px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cardFL {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.imageFLO {
+  display: flex;
+  width: 250px;
+  margin-left: 15px;
+  margin-top: 10px;
+  z-index: 100;
+}
+
+.imageFLO:hover {
+  cursor: pointer;
+}
+
+#contenedorFlotante1 {
+  background-color: whitesmoke;
+  margin-top: 50px;
+  margin-left: -10px;
+  width: 85px;
+  height: 100px;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 20px;
+  gap: 3px;
+  position: absolute;
+}
+
+.letra1 {
+  display: flex;
+  align-items: center;
+  margin-left: -8px;
+  margin-top: 2px;
+  width: 250px;
+}
+
+.hidden1 {
+  display: none;
+}
+
+.cardFL1 {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.imageFLO2 {
+  display: flex;
+  width: 250px;
+  margin-left: 15px;
+  margin-top: 10px;
+  z-index: 100;
+}
+
+.imageFLO1:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
@@ -82,6 +274,156 @@ body {
   }
   .main__img-banner2 img {
     display: flex;
+  }
+  .header__izquierda {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header__izquierda__features {
+    display: none;
+  }
+  .header__izquierda__company {
+    display: none;
+  }
+  .header__izquierda__careers {
+    display: none;
+  }
+  .header__izquierda__about {
+    display: none;
+  }
+  .header__derecha {
+    justify-content: flex-end;
+  }
+  .header__derecha__hamburguer {
+    display: flex;
+  }
+  .header__derecha__login {
+    display: none;
+  }
+  .header__derecha__register {
+    display: none;
+  }
+  #contenedorFlotante2 {
+    background-color: white;
+    width: 500px;
+    height: 3050px;
+    z-index: 50;
+    position: absolute;
+    gap: 100px;
+  }
+  .letra2 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 50;
+    position: absolute;
+  }
+  .carrersAnd {
+    gap: 10px;
+    flex-direction: column;
+    margin-left: -14px;
+    margin-top: -9px;
+  }
+  .hidden2 {
+    display: none;
+  }
+  .cardFL2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .imageFLO3 {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 10px;
+    z-index: 50;
+  }
+  .imageFLO3:hover {
+    cursor: pointer;
+  }
+  #contenedorFlotantes {
+    background-color: white;
+    width: 500px;
+    z-index: 200;
+    position: absolute;
+  }
+  .letras {
+    z-index: 110;
+  }
+  .hidden2s {
+    display: none;
+  }
+  .cardFL2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .imageFLO3 {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 10px;
+    z-index: 100;
+  }
+  .imageFLO3:hover {
+    cursor: pointer;
+  }
+  .header__izquierda__featuress {
+    margin-top: 1500px;
+  }
+  .loginnAndRegistrer {
+    margin-top: 300px;
+    text-align: center;
+  }
+  .Loginn {
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    color: hsl(0deg, 0%, 41%);
+    margin-left: 90px;
+    margin-top: 30px;
+  }
+  .loginn:hover {
+    color: black;
+    cursor: pointer;
+  }
+  .registerr {
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    color: hsl(0deg, 0%, 41%);
+    border: 1px solid hsl(0deg, 0%, 41%);
+    border-radius: 15px;
+    padding: 15px 5px 15px 5px;
+    text-align: center;
+  }
+  .registerr:hover {
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  #contenedorFlotantey {
+    background-color: yellow;
+    width: 500px;
+    z-index: 150;
+    position: absolute;
+  }
+  .letray {
+    z-index: 110;
+  }
+  .hiddeny {
+    display: none;
+  }
+  .cardFL2y {
+    display: flex;
+    flex-direction: column;
+  }
+  .imageFLO3y {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 10px;
+    z-index: 100;
+  }
+  .imageFLO3y:hover {
+    cursor: pointer;
   }
 }
 
